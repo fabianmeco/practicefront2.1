@@ -1,0 +1,103 @@
+@import '../../scss-variables.scss';
+
+header{
+    width: 100%;
+    display: flex;       
+    .logo{
+        width: 264px;
+        transition: width .5s;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        background-color: $logobackground;
+        div{
+            background-image: url($logoimagen);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 150px;
+            height: 20px;
+        }
+        &.logo-hidden{
+            width: 40px;
+            transition: width .5s;
+            div{
+                background-position: right;
+                width: 25px
+            }
+        }
+    }
+    .head-settings{
+        flex-grow: 1;
+        display: flex;
+        padding-right: 40px;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $headermenucolor;
+        a{
+            color: $white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }  
+    
+}
+.content{
+    width: 100%;
+    display: flex;            
+}
+.menu{
+    width: 264px;
+    transition: width .5s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: $headermenucolor;
+    color: $white;
+    .navigate{
+        color: #4d5056;
+        width: 80%;
+        border-bottom: 1px solid #4d5056;
+        padding: 10px 0;
+        font-weight: bold;
+        &.navigate-hidden{
+            display: none;
+            transition: display .4s
+        }
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        width: 80%;
+        li{
+            padding: 10px 0;
+            color: $white;
+            i{
+                margin-right: 5px;
+                color: #5c9df5;
+            }
+            span{
+                font-weight: bold;
+            }                
+        }
+    }
+    .close-menu{
+        margin: 50% 0;
+    }
+    &.menu-hidden{
+        width: 40px;
+        transition: width .5s;
+        li{
+            span{
+                display:none;
+                transition: display .4s;
+            }
+        }
+    }
+}
+
+.body-content{
+    width: 100%;
+    margin: 60px;
+    flex: 1;
+}

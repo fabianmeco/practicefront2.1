@@ -1,0 +1,27 @@
+<header>
+  <div class="logo" [ngClass]="{'logo-hidden': menuHidden}">
+    <div></div>
+  </div>
+  <div class="head-settings">
+    <a href=""> Admin name <i class="fa fa-cog"></i></a>
+  </div>
+</header>
+<div class="content">
+  <div class="menu" [ngClass]="{'menu-hidden': menuHidden}">
+    <div class="navigate" [ngClass]="{'navigate-hidden': menuHidden}" ><span>NAVIGATE</span></div>
+    <ul>
+      <li routerLink="/dashboard" routerLinkActive="active"><i class="fa fa-line-chart"></i><span>Analytics</span></li>
+      <li routerLink="/news" routerLinkActive="active"><i class="fa fa-newspaper-o"></i><span>News</span></li>
+      <li><i class="fa fa-file-text-o"></i><span>Board Brief</span></li>
+      <li><i class="fa fa-briefcase"></i><span>Briefcase</span></li>
+      <div class="close-menu">
+        <ul>
+          <li (click)= "onHideMenu()"><i class="fa" [ngClass]="{'fa-angle-double-left': !menuHidden, 'fa-angle-double-right': menuHidden}"></i><span>Close menu</span></li>
+        </ul>
+      </div>
+    </ul>    
+  </div>
+  <div class="body-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
