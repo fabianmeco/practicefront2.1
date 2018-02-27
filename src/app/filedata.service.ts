@@ -31,7 +31,7 @@ export class FiledataService {
                 }
               });
             value.next(this.activity);
-          }, 6000);
+          }, 5000);
       }
     )
   }

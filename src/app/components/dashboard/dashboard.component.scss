@@ -1,0 +1,17 @@
+.charts-container{
+    width: 100%;
+    .up-chart{
+        width: 100%;
+    }
+    .bottom-chart{
+        margin-top: 20px; 
+        display: flex;
+        justify-content: space-between;
+        .column-chart{
+            flex: 1;
+        }.doghnut-chart{
+            margin-left: 10px;
+            flex: 1;
+        }                
+    }
+}
